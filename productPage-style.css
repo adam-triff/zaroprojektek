@@ -1,0 +1,319 @@
+:root {
+  --black: #1b1b1b;
+  --green: #94B49F;
+  --white: #FCF8E8;
+  --orange: #DF7861;
+  --purple: #76549A;
+}
+
+@import 'https://fonts.googleapis.com/css2?family=Nunito';
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--black);
+  background-color: var(--green);
+  font-family: 'Nunito', arial;
+}
+
+#wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  width: 100%;
+}
+
+button {
+  color: var(--white);
+  border-radius: 20px !important;
+  background-color: var(--purple) !important;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  padding: 12px;
+  border: 2px black solid;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.grid {
+  line-height: 1.7;
+  border-top: 2px solid var(--white);
+  display: flex;
+}
+
+header {
+  background-color: var(--white);
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid var(--black);
+  top: 0;
+  left: 0;
+  min-height: 55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 50vw;
+}
+
+.logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 8%;
+  text-align: center;
+  margin-left: 25px;
+  min-width: 55px;
+  height: auto; 
+}
+
+nav a {
+  display: block;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in;
+  padding: 12px;
+}
+
+nav a:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+nav > ul {
+  width: 35vw;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+}
+
+#signup {
+  display: flex;
+  text-align: center;
+  height: 175px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#signup input[type='email'] {
+  padding: 12px;
+  border: 2px black solid;
+  max-width: 300px;
+  width: 100%;
+}
+
+#offers {
+  margin-top: 30px;
+}
+
+#offers .icon {
+  height: 120px;
+  width: 21vw;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#offers .desc {
+  height: 125px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#how-we-cook {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+iframe {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+#pricing {
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+  display: flex;
+}
+
+#pricing ul li {
+  line-height: 1.8;
+}
+
+.product {
+  margin: 20px;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 4);
+  background-color: var(--white);
+  display: flex;  
+}
+
+#pricing span {
+  font-size: xx-large;
+  margin-top: 145px;
+}
+
+.product .level {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 20px 0;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  margin-top: 10px;
+}
+
+.product ol li {
+  padding: 7px 0;
+}
+
+.product ol {
+  margin: 15px 0;
+}
+
+.product button {
+  margin: 15px 0;
+  border: 0;
+}
+
+footer {
+  border-top: 2px solid var(--white);
+  width: 100%;
+  padding: 28px;
+}
+
+footer ul {
+  justify-content: flex-end;
+  display: flex;
+}
+
+footer span {
+  float: right;
+  font-size: 0.85em;
+}
+
+footer ul li {
+  padding: 0 15px;
+}
+
+@media (max-width: 660px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  #signup {
+    margin-top: 110px;
+  }
+  .logo img {
+    margin: 0 auto;
+  }
+  .logo {
+    margin-top: 12px;
+    width: 100%;
+    position: relative;
+  }
+  #offers {
+    margin-top: 0;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  #how-we-cook {
+    margin-top: 245px !important;
+  }
+  nav a {
+	  font-size: 0.75em;
+  }
+}
+
+@media (max-width: 528px) {
+  #offers .icon {
+    display: none;
+  }
+  #offers .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+  nav a {
+	  font-size: 0.75em;
+  }
+}
+
+@media (max-width: 800px) {
+  #signup {
+    margin-top: 0px;
+  }
+  #how-we-cook {
+    margin-top: 80px;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  #pricing {
+    flex-direction: column;
+  }
+  #pricing span {
+    display:  none;
+  }
+}
